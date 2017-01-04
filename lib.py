@@ -49,6 +49,6 @@ def gen_graph(alpha):
 	xData.append(step)
 	yData.append(err)
 
+    plt.figure()
 	plt.plot(xData, yData)
 	plt.savefig('graph-alpha-' + str(alpha) + '.png')
-
