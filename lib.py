@@ -45,10 +45,9 @@ def gen_graph(alpha):
 
 	for step in range(1000, 50000000, 100):
 		err = matrix.squared_error(R, P, Q, K, step, alpha)
+		xData.append(step)
+		yData.append(err)
 
-	xData.append(step)
-	yData.append(err)
-
-    plt.figure()
+	plt.figure()
 	plt.plot(xData, yData)
 	plt.savefig('graph-alpha-' + str(alpha) + '.png')
